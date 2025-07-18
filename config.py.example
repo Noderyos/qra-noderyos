@@ -1,0 +1,10 @@
+################################
+#          This is a           #
+#        template file         #
+#                              #
+#     Copy it to config.py     #
+#    and put your own values   #
+################################
+
+BOT_TOKEN = ""
+OWNER_ID =
