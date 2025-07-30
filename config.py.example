@@ -7,4 +7,12 @@
 ################################
 
 BOT_TOKEN = ""
-OWNER_ID =
+OWNER_ID = 0
+GUILD_ID = 0
+
+LOG_MESSAGES_CHANNEL_ID = 0
+LOG_MEMBERS_CHANNEL_ID = 0
+
+R4UAB_UPDATE_CHANNEL = 0
+
+ACTIVITY_MESSAGES = [""]

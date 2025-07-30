@@ -10,3 +10,4 @@ except ImportError as e:
 except Exception as e:
     print("[ERROR] Invalid config.py", file=sys.stderr)
     exit(1)
+

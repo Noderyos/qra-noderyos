@@ -5,4 +5,5 @@ description = "A discord bot for my personal server"
 requires-python = ">=3.13"
 dependencies = [
     "discord-py>=2.5.2",
+    "html-to-markdown>=1.9.0",
 ]
