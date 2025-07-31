@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands, tasks
 from discord import app_commands
 from datetime import datetime
+from config_loader import config
 import utils
 import asyncio
 import pickle
