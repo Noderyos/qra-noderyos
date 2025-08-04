@@ -38,6 +38,7 @@ async def main():
     await bot.load_extension("cogs.main")
     await bot.load_extension("cogs.logger")
     await bot.load_extension("cogs.radio")
+    await bot.load_extension("cogs.rsswatcher")
     await bot.start(config.BOT_TOKEN)
 
 asyncio.run(main())

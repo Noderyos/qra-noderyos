@@ -13,6 +13,6 @@ GUILD_ID = 0
 LOG_MESSAGES_CHANNEL_ID = 0
 LOG_MEMBERS_CHANNEL_ID = 0
 
-R4UAB_UPDATE_CHANNEL = 0
+RSS_FEEDS = [("https://example.com/feed", 0)] # (url, channel_id)
 
 ACTIVITY_MESSAGES = [""]
