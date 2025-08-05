@@ -50,7 +50,10 @@ class RSS:
     def __handle_article(self, embed, article):
         title = article.find("title")
         description = article.find("description")
+        link = article.find("link")
 
+        if link is not None:
+            embed["url"] = link.text
         if title is not None:
             embed["title"] = title.text
         if description is not None:
