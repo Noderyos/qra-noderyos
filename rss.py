@@ -3,6 +3,7 @@ import os
 import urllib.request
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
+from bs4 import BeautifulSoup
 from html_to_markdown import convert_to_markdown
 
 
@@ -40,6 +41,12 @@ class RSS:
             raise ValueError("Not a RSS feed")
         return root.find("channel")
 
+    def __cleanup_html(self, html):
+        soup = BeautifulSoup(html, 'html.parser')
+        for img in soup.find_all("img"):
+            img.decompose()
+        return soup.text
+
     def __handle_article(self, embed, article):
         title = article.find("title")
         description = article.find("description")
@@ -47,7 +54,7 @@ class RSS:
         if title is not None:
             embed["title"] = title.text
         if description is not None:
-            embed["description"] = convert_to_markdown(description.text)
+            embed["description"] = convert_to_markdown(self.__cleanup_html(description.text))
 
         categories = article.findall("category")
         if categories:
