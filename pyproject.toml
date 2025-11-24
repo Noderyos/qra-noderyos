@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "A discord bot for my personal server"
 requires-python = ">=3.13"
 dependencies = [
+    "beautifulsoup4>=4.14.2",
     "discord-py>=2.5.2",
     "html-to-markdown>=1.9.0",
 ]
